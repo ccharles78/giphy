@@ -48,7 +48,7 @@ $("#run-search").on("click", function(event) {
     }).then(updatePage);
   });
 
-  $("#car-button").on("click", function() {
+  $("#search-button").on("click", function() {
 
     // Storing our giphy API URL for a random cat image
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=LAGebVZNkSZUf88WelXuGWoczQqvYlst&q="+ topic +"&limit=10&offset=0&rating=G&lang=en";
@@ -66,11 +66,11 @@ $("#run-search").on("click", function(event) {
         var imageUrl = response.data.image_original_url;
 
         // Creating and storing an image tag
-        var carImage = $("<img>");
+        var animalImage = $("<img>");
 
         // Setting the catImage src attribute to imageUrl
-        carImage.attr("src", imageUrl);
-        carImage.attr("alt", "car image");
+        animailImage.attr("src", imageUrl);
+        animalImage.attr("alt", "Animal image");
 
         // Prepending the catImage to the images div
         $("#images").prepend(carImage);
